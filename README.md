@@ -4,11 +4,16 @@
 ## Methodology
 
 The volatility-managed portfolio developed by Moreira and Muir (2017) is given by:
-$f^\sigma_{t+1}=\frac{c}{\hat \sigma^2_t(f)} f_{t+1}$
+
+$$f^\sigma_{t+1}=\frac{c}{\hat \sigma^2_t(f)} f_{t+1}$$
+
 where $f_{t+1}$ is the buy-and-hold portfolio excess return and, $\hat \sigma^2_t(f)$ is a proxy for the portfolio's conditional variance, given by: 
-$\hat \sigma^2_t(f) = RV^2_t(f) = \sum^1_{d=1/D} \bigg(f_{t+d} - \frac{\sum^1_{d=1/D}f_{t+d}}{D}\bigg)^2$ and $\hat \sigma^2_{t,\text{new}}(f) = RV^2_t(f) = \frac{91}{22}\sum^{91}_{d=1} \bigg(f_{(t+1)-d} - \frac{\sum^{91}_{d=1}f_{(t+1)-d}}{91}\bigg)^2$.  
+
+$$\hat \sigma^2_t(f) = RV^2_t(f) = \sum^1_{d=1/D} \bigg(f_{t+d} - \sum^1_{d=1/D}f_{t+d}/D\bigg)^2$$
+
 Here, $\hat \sigma^2_t(f)$ is used for the replication part of the analysis with $D$ equal to the number of days in the month $t$ and $\hat \sigma^2_{t,\text{new}}(f)$ is used for the new analysis part. The constant $c$ controls the average exposure of the strategy and is chosen in a way that the managed portfolio's unconditional standard deviation is equal to the standard deviation of the buy-and-hold portfolio. This means that $c$ can be obtained with the following formula: 
-$\sigma^2\bigg(\frac{f_{t+1}}{\hat \sigma^2_t(f)}c\bigg) = \sigma^2(f_{t+1}) \Leftrightarrow c=\frac{\sigma(f_{t+1})}{\sigma(f_{t+1}/\hat \sigma^2_t(f))}$.
+
+$$\sigma^2\bigg(\frac{f_{t+1}}{\hat \sigma^2_t(f)}c\bigg) = \sigma^2(f_{t+1}) \Leftrightarrow c=\frac{\sigma(f_{t+1})}{\sigma(f_{t+1}/\hat \sigma^2_t(f))}.$$
 
 
 ## Replication of findings from the paper (1)
