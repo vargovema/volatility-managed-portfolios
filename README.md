@@ -1,5 +1,6 @@
 # Volatility-managed portfolios
 
+This project replicates and extends the findings of Moreira and Muir (2017) on volatility-managed portfolios, aiming to evaluate whether higher risk periods correlate with higher returns in the U.S. stock market.
 
 ## Methodology
 
